@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" >
+    <title> Venom 3D animation </title>
+</head>
+<body>
+    <div id="card-img" class="card">
+        <img src="./venom-3-sony-pictures.jpg" alt="tom Hardy" class="th-bg">
+        <img src="./venom.png" alt="Venom logo" class="card-logo">
+        <img src="./pngegg.png" alt="Venom title" class="card-title">
+    </div>
+
+    <audio id="audio" src="./we-are-venom (1).mp3"></audio>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const card = document.getElementById('card-img');
+
+        card.addEventListener('mouseover', () => {
+            audio.play();
+        })
+
+        card.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0;
+        })
+
+    </script>
+</body>
+</html>
